@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,12 +16,30 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { float32ndarray, ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute a two-sample Z-test for two one-dimensional single-precision floating-point ndarrays.
+* Computes a two-sample Z-test for two one-dimensional single-precision floating-point ndarrays.
 *
-* @module @stdlib/stats-base-ndarray-sztest2
+* ## Notes
+*
+* -   The function expects the following ndarrays in order:
+*
+*     -   first one-dimensional input ndarray.
+*     -   second one-dimensional input ndarray.
+*     -   a zero-dimensional output ndarray containing a results object.
+*     -   a zero-dimensional ndarray specifying the alternative hypothesis.
+*     -   a zero-dimensional ndarray specifying the significance level.
+*     -   a zero-dimensional ndarray specifying the difference in means under the null hypothesis.
+*     -   a zero-dimensional ndarray specifying the known standard deviation of the first one-dimensional input ndarray.
+*     -   a zero-dimensional ndarray specifying the known standard deviation of the second one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns output ndarray
 *
 * @example
 * var Float32Results = require( '@stdlib/stats-base-ztest-two-sample-results-float32' );
@@ -30,7 +48,6 @@
 * var Float32Array = require( '@stdlib/array-float32' );
 * var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
 * var ndarray = require( '@stdlib/ndarray-ctor' );
-* var sztest2 = require( '@stdlib/stats-base-ndarray-sztest2' );
 *
 * var opts = {
 *     'dtype': 'float32'
@@ -60,7 +77,7 @@
 *
 * // Create a zero-dimensional results ndarray:
 * var ResultsArray = structFactory( Float32Results );
-* var out = new ndarray( 'generic', new ResultsArray( 1 ), [], [ 0 ], 0, 'row-major' );
+* var out = new ndarray( Float32Results, new ResultsArray( 1 ), [], [ 0 ], 0, 'row-major' );
 *
 * // Perform a Z-test:
 * var v = sztest2( [ x, y, out, alt, alpha, diff, sigmax, sigmay ] );
@@ -68,12 +85,9 @@
 *
 * console.log( v.get().toString() );
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function sztest2<T extends ndarray>( arrays: [ float32ndarray, float32ndarray, T, float32ndarray, float32ndarray, float32ndarray, float32ndarray, float32ndarray ] ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = sztest2;
