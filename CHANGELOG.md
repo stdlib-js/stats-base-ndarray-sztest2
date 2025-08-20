@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-21)
+## Unreleased (2025-08-20)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`e4701e8`](https://github.com/stdlib-js/stdlib/commit/e4701e814ce9db206690ad9f2ce8b84e5a4f4e52) - **docs:** fix example code _(by Philipp Burckhardt)_
 -   [`f3dfedc`](https://github.com/stdlib-js/stdlib/commit/f3dfedcc9f4ba210b01dc91a70579be530d999f7) - **feat:** add `stats/base/ndarray/sztest2` [(#7703)](https://github.com/stdlib-js/stdlib/pull/7703) _(by Gururaj Gurram, Athan Reines)_
 
 </details>
@@ -34,10 +35,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gururaj Gurram
+-   Philipp Burckhardt
 
 </section>
 
