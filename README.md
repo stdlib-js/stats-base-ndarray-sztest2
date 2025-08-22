@@ -49,38 +49,32 @@ Here, `μX` and `μY` are the true population means of samples `X` and `Y`, resp
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-ndarray-sztest2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-sztest2 = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var sztest2 = require( 'path/to/vendor/umd/stats-base-ndarray-sztest2/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.sztest2;
-})();
-</script>
+var sztest2 = require( '@stdlib/stats-base-ndarray-sztest2' );
 ```
 
 #### sztest2( arrays )
@@ -155,20 +149,15 @@ The function has the following parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ztest-two-sample-results-float32@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ztest-alternative-resolve-enum@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-struct-factory@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-normal@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Float32Results = require( '@stdlib/stats-base-ztest-two-sample-results-float32' );
+var resolveEnum = require( '@stdlib/stats-base-ztest-alternative-resolve-enum' );
+var structFactory = require( '@stdlib/array-struct-factory' );
+var normal = require( '@stdlib/random-array-normal' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var sztest2 = require( '@stdlib/stats-base-ndarray-sztest2' );
 
 var opts = {
     'dtype': 'float32'
@@ -205,11 +194,6 @@ var out = new ndarray( Float32Results, new ResultsArray( 1 ), [], [ 0 ], 0, 'row
 // Perform a Z-test:
 var v = sztest2( [ x, y, out, alt, alpha, diff, sigmax, sigmay ] );
 console.log( v.get().toString() );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -296,7 +280,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-ndarray-sztest2/main/LICENSE
 
-[@stdlib/stats/base/ztest/two-sample/results/float32]: https://github.com/stdlib-js/stats-base-ztest-two-sample-results-float32/tree/umd
+[@stdlib/stats/base/ztest/two-sample/results/float32]: https://github.com/stdlib-js/stats-base-ztest-two-sample-results-float32
 
 </section>
 
