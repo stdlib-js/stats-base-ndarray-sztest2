@@ -56,7 +56,7 @@ Here, `μX` and `μY` are the true population means of samples `X` and `Y`, resp
 ## Usage
 
 ```javascript
-import sztest2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@deno/mod.js';
+import sztest2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@v0.1.0-deno/mod.js';
 ```
 
 #### sztest2( arrays )
@@ -139,7 +139,7 @@ import normal from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-normal@de
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import sztest2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@deno/mod.js';
+import sztest2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-sztest2@v0.1.0-deno/mod.js';
 
 var opts = {
     'dtype': 'float32'
