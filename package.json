@@ -58,7 +58,7 @@
     "@stdlib/random-strided-normal": "^0.2.2",
     "@stdlib/stats-base-ztest-alternative-resolve-enum": "^0.0.1",
     "@stdlib/stats-base-ztest-two-sample-results-float32": "^0.0.1",
-    "@stdlib/string-format": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
